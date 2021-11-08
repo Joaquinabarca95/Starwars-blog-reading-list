@@ -26,7 +26,7 @@ const Navbar = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                   >
-                  Favorites 
+                  Favorite 
                   <div className="cantidad-favoritos">
                   {favorites.favoriteCharacters.length + favorites.favoritePlanets.length + favorites.favoriteVehicles.length}
                   </div>
