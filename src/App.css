@@ -61,3 +61,20 @@ body {
 h3 {
   color: rgb(197, 79, 79);
 }
+
+.favorites-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cantidad-favoritos {
+  background-color: royalblue;
+  color: white;
+}
+
+.favorites {
+  display: flex;
+  width: 10rem;
+  justify-content: space-between;
+}

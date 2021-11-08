@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 const PlanetCard = ({name, url, toggleFavoritePlanets, favorites}) => {
 
 
-    const isFavorite = favorites.favoritePlanets.incldues(name)
+    const isFavorite = favorites.favoritePlanets.includes(name)
 
     const style = {
       width: "20rem",
