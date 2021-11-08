@@ -13,3 +13,19 @@ body {
   padding: 3rem;
 }
 
+.card-container{
+  padding: 3rem;
+}
+
+.card-container ul {
+  overflow-x: scroll;
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.card{
+  margin: 0 1rem 0 0;
+}
