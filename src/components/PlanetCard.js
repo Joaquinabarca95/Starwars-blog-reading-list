@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from 'react'
 
-const CharacterCard = ({name, url, toggleFavoritesCharacters, favorites}) => {
+const PlanetCard = ({name, url, toggleFavoritePlanets, favorites}) => {
 
 
-    const isFavorite = favorites.favoriteCharacters.includes(name)
+    const isFavorite = favorites.favoritePlanets.incldues(name)
 
     const style = {
-        width: "20rem",
-        height: "35rem"
+      width: "20rem",
+      height: "35rem"
       };
     
-      const [characterInfo, setCharacterInfo] = useState()
+      const [planetInfo, setPlanetInfo] = useState()
       useEffect(()=> {
        fetch(url)
        .then(response => response.json())
-       .then(data => setCharacterInfo(data.result.properties))
+       .then(data => setPlanetInfo(data.result.properties))
        .catch(err => console.log(err))
-      }, [characterInfo])
+      }, [planetInfo])
 
     return (
         <>
@@ -27,11 +27,10 @@ const CharacterCard = ({name, url, toggleFavoritesCharacters, favorites}) => {
                   <div className="card-body">
                     <h5 className="card-title">{name}</h5>
                     <p className="card-text">
-                      {characterInfo ? (
+                      {planetInfo ? (
                         <>
-                        <p>Gender: {characterInfo.gender}</p>
-                        <p>Hair Color: {characterInfo.hair_color}</p>
-                        <p>Eye: {characterInfo.eye_color}</p>
+                        <p>Population: {planetInfo.population}</p>
+                        <p>Terrain: {planetInfo.terrain}</p>
                         </>
                       ) : "Loading..."}
                     </p>
@@ -39,7 +38,7 @@ const CharacterCard = ({name, url, toggleFavoritesCharacters, favorites}) => {
                     <a href="/" className="btn btn-primary">
                       More Details...
                     </a>
-                    <a onClick={() => toggleFavoritesCharacters(name)} className="btn btn-outline-warning">{isFavorite ? <i className="fas fa-heart"></i> : <i className="far fa-heart"></i>}</a>
+                    <a onClick={() => toggleFavoritePlanets(name)} className="btn btn-outline-warning">{isFavorite ? <i className="fas fa-heart"></i> : <i className="far fa-heart"></i>}</a>
                     </div>
                   </div>
                 </div>
@@ -50,4 +49,4 @@ const CharacterCard = ({name, url, toggleFavoritesCharacters, favorites}) => {
     )
 }
 
-export default CharacterCard
+export default PlanetCard

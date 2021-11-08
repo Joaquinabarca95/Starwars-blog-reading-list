@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import AppContext from "../appcontext/AppContext";
 import logo from "../img/starwars-logo.png";
 
 const Navbar = () => {
+
+  const {favorites} = useContext(AppContext)
+
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -24,9 +28,13 @@ const Navbar = () => {
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a className="dropdown-item" href="/">
-                      Favorite item
-                    </a>
+                    
+                      {favorites ? favorites.favoriteCharacters.map((name) => {
+                        <>
+                        <a className="dropdown-item" href="/">{name}</a>
+                        </>
+                      }) : "(empty)"}
+                    
                   </li>
                 </ul>
               </li>

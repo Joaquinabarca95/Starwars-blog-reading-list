@@ -2,14 +2,11 @@ import React, { useContext, useEffect, useState } from "react";
 import CharacterCard from "./CharacterCard";
 import AppContext from "../appcontext/AppContext";
 
-
 const Characters = () => {
+  const { characters, toggleFavoritesCharacters, favorites} = useContext(AppContext);
 
-    const {characters} = useContext(AppContext)
-    const [allCharacters, setAllCharacters] = useState([])
-    useEffect(()=> {
-        console.log(characters, "entre a characters");
-    }, [characters])
+  useEffect(() => {
+  }, [characters]);
   return (
     <>
       <div className="container-fluid">
@@ -17,8 +14,14 @@ const Characters = () => {
           <div className="title">
             <h3>Characters</h3>
           </div>
-          
-          <CharacterCard />
+          <div className="card-list">
+              <ul>
+            {characters ?
+              characters.results.map((character, index) => {
+                return <CharacterCard key={index} name={character.name} url={character.url} toggleFavoritesCharacters={toggleFavoritesCharacters} favorites={favorites}/>;
+              }) : "Loading..."}
+              </ul>
+          </div>
         </div>
       </div>
     </>

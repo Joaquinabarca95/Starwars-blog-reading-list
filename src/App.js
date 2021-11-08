@@ -2,6 +2,8 @@
 import './App.css';
 import Characters from './components/Characters';
 import Navbar from './components/Navbar';
+import Planets from './components/Planets';
+import Vehicles from './components/Vehicles';
 
 function App() {
   return (
@@ -9,6 +11,8 @@ function App() {
       
       <Navbar />
       <Characters />
+      <Planets />
+      <Vehicles />
       </div>
   );
 }

@@ -1,10 +1,12 @@
-*, *::after, *::before {
-  box-sizing: border-box;
+* {
+  box-sizing: border-box; 
 }
 
 body {
   margin: 0;
 }
+
+
 
 .navbar {
   display: flex;
@@ -27,5 +29,35 @@ body {
 }
 
 .card{
+  position: relative;
   margin: 0 1rem 0 0;
+  height: 530px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+.card-footer-info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+}
+
+h3 {
+  color: rgb(197, 79, 79);
 }
