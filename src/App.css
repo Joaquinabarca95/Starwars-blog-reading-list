@@ -11,11 +11,5 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 3rem;
-  border: 2px solid red;
 }
 
-.edit-navbar {
-  display: flex;
-  justify-content: space-between;
-  border: 2px solid white;
-}
