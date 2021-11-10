@@ -6,8 +6,6 @@ body {
   margin: 0;
 }
 
-
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -33,6 +31,13 @@ body {
   margin: 0 1rem 0 0;
   height: 530px;
 }
+
+.card:hover{
+  transform: scale(1.02);
+  box-shadow: 1px 1px 5px black;
+}
+
+
 
 ::-webkit-scrollbar {
   width: 12px;
@@ -62,19 +67,42 @@ h3 {
   color: rgb(197, 79, 79);
 }
 
+
+.dropdown_btn{
+  background-color: #848688 !important;
+}
+
+.favorites-wrapper {
+  display: flex;
+}
+
+.cantidad-favoritos {
+  background-color: #848688;
+  color: white;
+}
+
+.favorites {
+  display: flex;
+  width: 5rem;
+  justify-content: space-between;
+}
+
 .favorites-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.cantidad-favoritos {
-  background-color: royalblue;
-  color: white;
+.favorite-global-container{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.favorites {
-  display: flex;
-  width: 10rem;
-  justify-content: space-between;
+.cuerpo {
+  padding: 3rem;
+}
+
+.tabla {
+  margin-top: 2rem;
 }

@@ -3,7 +3,7 @@ import AppContext from "../appcontext/AppContext";
 import VehicleCard from "./VehicleCard";
 
 const Vehicles = () => {
-  const { vehicles, toggleFavoriteVehicles, favorites } = useContext(AppContext);
+  const { vehicles, toggleFavoritesVehicles, favorites } = useContext(AppContext);
 
   useEffect(() => {}, [vehicles]);
   return (
@@ -22,7 +22,7 @@ const Vehicles = () => {
                       key={index}
                       name={vehicle.name}
                       url={vehicle.url}
-                      toggleFavoriteVehicles={toggleFavoriteVehicles}
+                      toggleFavoritesVehicles={toggleFavoritesVehicles}
                       favorites={favorites}
                     />
                   );

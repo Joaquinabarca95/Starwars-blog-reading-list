@@ -1,19 +1,24 @@
-
-import './App.css';
-import Characters from './components/Characters';
-import Navbar from './components/Navbar';
-import Planets from './components/Planets';
-import Vehicles from './components/Vehicles';
+import "./App.css";
+import Navbar from "./components/Navbar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from "./components/HomePage";
+import CharacterInfo from "./components/CharacterInfo";
+import PlanetInfo from "./components/PlanetInfo";
+import VehicleInfo from "./components/VehicleInfo";
 
 function App() {
   return (
-    <div className="App">
-      
-      <Navbar />
-      <Characters />
-      <Planets />
-      <Vehicles />
-      </div>
+    <>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route exact path="/" element={<HomePage />}/>
+          <Route exact path="/characters" element={<CharacterInfo />} />
+          <Route exact path="/planets" element={<PlanetInfo />}/>
+          <Route exact path="/vehicles" element={<VehicleInfo />}/> 
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

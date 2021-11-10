@@ -4,7 +4,7 @@ import PlanetCard from './PlanetCard';
 
 const Planets = () => {
 
-    const { planets, toggleFavoritePlanets, favorites} = useContext(AppContext)
+    const { planets, toggleFavoritesPlanets, favorites} = useContext(AppContext)
     useEffect(() => {
     }, [planets])
     return (
@@ -18,7 +18,7 @@ const Planets = () => {
               <ul>
             {planets ?
               planets.results.map((planet, index) => {
-                return <PlanetCard key={index} name={planet.name} url={planet.url} toggleFavoritePlanets={toggleFavoritePlanets} favorites={favorites}/>;
+                return <PlanetCard key={index} name={planet.name} url={planet.url} toggleFavoritesPlanets={toggleFavoritesPlanets} favorites={favorites}/>;
               }): "Loading..."}
               </ul>
           </div>

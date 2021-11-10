@@ -3,10 +3,10 @@ import CharacterCard from "./CharacterCard";
 import AppContext from "../appcontext/AppContext";
 
 const Characters = () => {
-  const { characters, toggleFavoritesCharacters, favorites} = useContext(AppContext);
+  const { characters, toggleFavoritesCharacters, favorites, toggleInformacionElemento} = useContext(AppContext);
 
-  useEffect(() => {
-  }, [characters]);
+  // useEffect(() => {
+  // }, [characters]);
   return (
     <>
       <div className="container-fluid">
@@ -18,7 +18,7 @@ const Characters = () => {
               <ul>
             {characters ?
               characters.results.map((character, index) => {
-                return <CharacterCard key={index} name={character.name} url={character.url} toggleFavoritesCharacters={toggleFavoritesCharacters} favorites={favorites}/>;
+                return <CharacterCard key={index} name={character.name} url={character.url} toggleFavoritesCharacters={toggleFavoritesCharacters} favorites={favorites} toggleInformacionElemento={toggleInformacionElemento}/>;
               }) : "Loading..."}
               </ul>
           </div>

@@ -1,19 +1,17 @@
 import React, { useContext } from 'react'
-import AppContext from '../appcontext/AppContext'
+import AppContext from '../appcontext/AppContext';
 
-const CharacterInfo = () => {
+const VehicleInfo = () => {
 
-    const {informacionElemento} = useContext(AppContext)
-
+    const {informacionElemento}= useContext(AppContext);
     const style = {
-        width: "600px",
-        height: "400px",
+        width: "800px",
+        height: "600px",
       };
-  
+
     return (
         <div className="container">
             <div className="cuerpo">
-
                 <div className="informacion col-md-12 mb-5">
                     <h2>{informacionElemento.name}</h2>
                     
@@ -30,21 +28,21 @@ const CharacterInfo = () => {
                     <thead>
                         <tr>
                             <th scope="col">Name</th>
-                            <th scope="col">Birth</th>
-                            <th scope="col">Gender</th>
-                            <th scope="col">Height</th>
-                            <th scope="col">Skin Color</th>
-                            <th scope="col">Eye Color</th>
+                            <th scope="col">Model</th>
+                            <th scope="col">Cargo Capacity</th>
+                            <th scope="col">Crew</th>
+                            <th scope="col">Length</th>
+                            <th scope="col">Class</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>{informacionElemento.name}</td>
-                            <td>{informacionElemento.birth_year}</td>
-                            <td>{informacionElemento.gender}</td>
-                            <td>{informacionElemento.height}</td>
-                            <td>{informacionElemento.skin_color}</td>
-                            <td>{informacionElemento.eye_color}</td>
+                            <td>{informacionElemento.model}</td>
+                            <td>{informacionElemento.cargo_capacity}</td>
+                            <td>{informacionElemento.crew}</td>
+                            <td>{informacionElemento.length}</td>
+                            <td>{informacionElemento.vehicle_class}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -54,4 +52,4 @@ const CharacterInfo = () => {
     )
 }
 
-export default CharacterInfo
+export default VehicleInfo
